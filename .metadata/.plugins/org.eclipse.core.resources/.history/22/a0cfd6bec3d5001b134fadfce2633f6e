@@ -19,16 +19,6 @@ public class Colegio {
 		this.listaE = listaE;
 		this.listaA = listaA;
 	}
-	
-	
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 
 	public ListaEmpleados getListaE() {
 		return listaE;

@@ -2,32 +2,20 @@ package modelado;
 
 public class Colegio {
 	
-	private String nombre;
-	private ListaEmpleados listaE;
-	private HashMapAlumnos listaA;
+	ListaEmpleados listaE;
+	HashMapAlumnos listaA;
 	
 	public Colegio() {
 		// TODO Auto-generated constructor stub
-	
+		private String nombre;
 		listaA = new HashMapAlumnos();
 		listaE = new ListaEmpleados();
 	}
 	
-	public Colegio(String nombre,ListaEmpleados listaE, HashMapAlumnos listaA) {
+	public Colegio(ListaEmpleados listaE, HashMapAlumnos listaA) {
 		super();
-		this.nombre = nombre;
 		this.listaE = listaE;
 		this.listaA = listaA;
-	}
-	
-	
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
 	}
 
 	public ListaEmpleados getListaE() {

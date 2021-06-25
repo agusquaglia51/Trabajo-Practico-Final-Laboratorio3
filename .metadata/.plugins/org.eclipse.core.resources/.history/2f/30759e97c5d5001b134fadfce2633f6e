@@ -172,11 +172,10 @@ public class Main {
 			
 			
 			
-			unColegio.put("Profesores", misProfesores);
-			unColegio.put("Administrativos", misAdministrativos);
+			unColegio.put("Profesores ", misProfesores);
+			unColegio.put("Administrativos ", misAdministrativos);
 			
 			jsonArchivo.grabar(unColegio);
-
 		
 			
 			jsonToString = unColegio.toString();
@@ -270,7 +269,7 @@ public class Main {
 			
 			System.out.println("1. Administrar la lista de empleados \n");
 			System.out.println("2. Administrar la lista de alumnos \n");
-			System.out.println("3. Leer listado de empleados json del archivo \n");
+			System.out.println("3. Leer listado de  profesores json del archivo \n");
 			System.out.println("4. Salir \n");
 			
 			System.out.println("Digite la opcion que desea realizar: \n");
@@ -401,11 +400,12 @@ public class Main {
 				case 3:
 					JsonUtiles pruebaDeLectura = new JsonUtiles();
 					
+					String json = devolverJSON(SanAgustin);
 					
-					String aux = pruebaDeLectura.leer();
+					pruebaDeLectura.grabar(json);
 					
 					
-					System.out.println(aux); 
+					System.out.println(json); 
 					
 					break;
 					

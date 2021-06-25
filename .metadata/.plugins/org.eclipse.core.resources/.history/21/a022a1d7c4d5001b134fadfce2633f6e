@@ -57,7 +57,7 @@ public class Main {
 		
 		
 		
-		
+		String json = devolverJSON(SanAgustin);
 		
 		
 		//System.out.println(" "+json);
@@ -77,9 +77,6 @@ public class Main {
 		
 		
 		
-		
-		
-		
 	}
 	
 	
@@ -89,10 +86,14 @@ public class Main {
 	
 	public static void JSONtoJava(String json) {
 		
-		/*
+		
 		try {
 			
+			JSONObject unColegio = new JSONObject(json);
 			
+			
+			
+			JSONArray vector = jsonObject.getJSONArray("Profesores");
 			
 			int i = 0;
 		
@@ -101,7 +102,7 @@ public class Main {
 			
 		} catch (JSONException e) {
 			e.printStackTrace();
-		}*/
+		}
 	}
 	
 	
@@ -172,11 +173,10 @@ public class Main {
 			
 			
 			
-			unColegio.put("Profesores", misProfesores);
-			unColegio.put("Administrativos", misAdministrativos);
+			unColegio.put("Profesores ", misProfesores);
+			unColegio.put("Administrativos ", misAdministrativos);
 			
 			jsonArchivo.grabar(unColegio);
-
 		
 			
 			jsonToString = unColegio.toString();
@@ -270,7 +270,7 @@ public class Main {
 			
 			System.out.println("1. Administrar la lista de empleados \n");
 			System.out.println("2. Administrar la lista de alumnos \n");
-			System.out.println("3. Leer listado de empleados json del archivo \n");
+			System.out.println("3. Leer listado de  profesores json del archivo \n");
 			System.out.println("4. Salir \n");
 			
 			System.out.println("Digite la opcion que desea realizar: \n");
@@ -402,11 +402,8 @@ public class Main {
 					JsonUtiles pruebaDeLectura = new JsonUtiles();
 					
 					
-					String aux = pruebaDeLectura.leer();
 					
-					
-					System.out.println(aux); 
-					
+					System.out.println(pruebaDeLectura.leer()); 
 					break;
 					
 					

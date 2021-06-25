@@ -1,5 +1,6 @@
 package modelado;
 
+import java.util.ArrayList;
 
 public class Alumno extends Persona{
 	private int legajo;
@@ -69,6 +70,7 @@ public class Alumno extends Persona{
 	public int getLegajo() {
 		return legajo;
 	}
+
 
 
 

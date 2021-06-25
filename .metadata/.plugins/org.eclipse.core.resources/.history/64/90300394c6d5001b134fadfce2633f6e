@@ -172,11 +172,10 @@ public class Main {
 			
 			
 			
-			unColegio.put("Profesores", misProfesores);
-			unColegio.put("Administrativos", misAdministrativos);
+			unColegio.put("Profesores ", misProfesores);
+			unColegio.put("Administrativos ", misAdministrativos);
 			
 			jsonArchivo.grabar(unColegio);
-
 		
 			
 			jsonToString = unColegio.toString();
@@ -401,6 +400,7 @@ public class Main {
 				case 3:
 					JsonUtiles pruebaDeLectura = new JsonUtiles();
 					
+					//String json = devolverJSON(SanAgustin);
 					
 					String aux = pruebaDeLectura.leer();
 					
