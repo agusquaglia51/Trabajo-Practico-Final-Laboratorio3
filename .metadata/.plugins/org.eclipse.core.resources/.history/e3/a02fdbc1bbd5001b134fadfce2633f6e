@@ -10,7 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import Excepciones.PasswordIncorrectException;
+
 import modelado.ListaEmpleados;
 import modelado.Profesor;
 import modelado.Administrativo;
