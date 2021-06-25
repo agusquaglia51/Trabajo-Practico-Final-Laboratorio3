@@ -134,7 +134,7 @@ public class Main {
 	
 	
 	
-	public static String devolverJSON(Colegio colegio){
+	public static String devolverJSON(ListaEmpleados listaEmpleados){
 		
 		String jsonToString = "";
 		
@@ -142,23 +142,17 @@ public class Main {
 		
 		try {
 			
-			JSONObject unColegio = new JSONObject();
+			JSONObject unObjeto = new JSONObject();
 			
 			JSONArray misProfesores = new JSONArray();
 			
-			JSONArray misAdministrativos = new JSONArray();
-			
-			
-			unColegio.put("Colegio", colegio);
-			
-			
 			int i = 0;
 			
-			while(i < colegio.getListaE().cantidadEmpleados()){
+			while(i < listaEmpleados.cantidadEmpleados()){
 				
-				if(colegio.getListaE().getEmpleado(i) instanceof Profesor) {
+				if(listaEmpleados.getEmpleado(i) instanceof Profesor) {
 					
-					Profesor aux = (Profesor) colegio.getListaE().getEmpleado(i);
+					Profesor aux = (Profesor) listaEmpleados.getEmpleado(i);
 					
 					JSONObject unProfesor = new JSONObject();
 					
@@ -173,38 +167,16 @@ public class Main {
 					
 					misProfesores.put(unProfesor);
 					
-				}else {
-					
-					Administrativo aux = (Administrativo) colegio.getListaE().getEmpleado(i);
-					
-					JSONObject unAdministrativo = new JSONObject();
-					
-					unAdministrativo.put("Nombre", aux.getNombre());
-					unAdministrativo.put("Apellido", aux.getApellido());
-					unAdministrativo.put("DNI ", aux.getDNI());
-					unAdministrativo.put("Sueldo", aux.getSueldo());
-					unAdministrativo.put("ObraSocial", aux.getObraSocial());
-					unAdministrativo.put("Telefono", aux.getTelefono());
-					unAdministrativo.put("NroAsociado", aux.getNroAsociado());
-					unAdministrativo.put("Materia", aux.getDepartamentoDeTrabajo());
-					
-					misAdministrativos.put(unAdministrativo);
 				}
-				
-				
 				i++;
 			}
 			
+			unObjeto.put("Profesores", misProfesores);
 			
-			
-			
-			unColegio.put("Profesores ", misProfesores);
-			unColegio.put("Administrativos ", misAdministrativos);
-			
-			jsonArchivo.grabar(unColegio);
+			jsonArchivo.grabar(misProfesores);
 		
 			
-			jsonToString = unColegio.toString();
+			jsonToString = unObjeto.toString();
 	            
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -212,12 +184,6 @@ public class Main {
 		
 		return jsonToString;
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

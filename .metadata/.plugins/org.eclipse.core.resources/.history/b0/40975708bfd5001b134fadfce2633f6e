@@ -47,8 +47,8 @@ public class HashMapAlumnos implements IListaAlumnos{
 		mapa.clear();
 	}
 	
-	public Alumno getAlumno(int legajo) {
-		return mapa.get(legajo);
+	public Alumno getAlumno() {
+		
 	}
 	
 

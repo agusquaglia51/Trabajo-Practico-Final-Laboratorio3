@@ -148,11 +148,12 @@ public class Main {
 			
 			JSONArray misAdministrativos = new JSONArray();
 			
+			JSONArray misAlumnos = new JSONArray();
 			
 			unColegio.put("Colegio", colegio);
 			
 			
-			int i = 0;
+			int i = 0, j = 0;
 			
 			while(i < colegio.getListaE().cantidadEmpleados()){
 				
@@ -195,6 +196,10 @@ public class Main {
 				i++;
 			}
 			
+			while(j < colegio.getListaA().contar()) {
+				
+				
+			}
 			
 			
 			
@@ -212,12 +217,6 @@ public class Main {
 		
 		return jsonToString;
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

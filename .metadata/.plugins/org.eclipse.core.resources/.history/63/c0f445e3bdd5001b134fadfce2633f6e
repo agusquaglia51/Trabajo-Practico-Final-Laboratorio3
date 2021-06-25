@@ -142,14 +142,11 @@ public class Main {
 		
 		try {
 			
-			JSONObject unColegio = new JSONObject();
+			JSONObject unObjeto = new JSONObject();
 			
 			JSONArray misProfesores = new JSONArray();
 			
-			JSONArray misAdministrativos = new JSONArray();
-			
-			
-			unColegio.put("Colegio", colegio);
+			unObjeto.put("Colegio", colegio);
 			
 			
 			int i = 0;
@@ -186,25 +183,22 @@ public class Main {
 					unAdministrativo.put("ObraSocial", aux.getObraSocial());
 					unAdministrativo.put("Telefono", aux.getTelefono());
 					unAdministrativo.put("NroAsociado", aux.getNroAsociado());
-					unAdministrativo.put("Materia", aux.getDepartamentoDeTrabajo());
+					unAdministrativo.put("Materia", aux.getMateriaQueEnsenia());
+					unAdministrativo.put("CursosAcargo", aux.getCantidadDeCursos());
 					
-					misAdministrativos.put(unAdministrativo);
+					misProfesores.put(unProfesor);
 				}
 				
 				
 				i++;
 			}
 			
+			unObjeto.put("Profesores", misProfesores);
 			
-			
-			
-			unColegio.put("Profesores ", misProfesores);
-			unColegio.put("Administrativos ", misAdministrativos);
-			
-			jsonArchivo.grabar(unColegio);
+			jsonArchivo.grabar(misProfesores);
 		
 			
-			jsonToString = unColegio.toString();
+			jsonToString = unObjeto.toString();
 	            
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -212,12 +206,6 @@ public class Main {
 		
 		return jsonToString;
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

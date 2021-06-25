@@ -148,7 +148,6 @@ public class Main {
 			
 			JSONArray misAdministrativos = new JSONArray();
 			
-			
 			unColegio.put("Colegio", colegio);
 			
 			
@@ -197,7 +196,6 @@ public class Main {
 			
 			
 			
-			
 			unColegio.put("Profesores ", misProfesores);
 			unColegio.put("Administrativos ", misAdministrativos);
 			
@@ -212,12 +210,6 @@ public class Main {
 		
 		return jsonToString;
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	
