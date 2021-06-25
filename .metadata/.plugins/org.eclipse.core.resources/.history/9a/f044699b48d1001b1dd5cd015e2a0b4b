@@ -1,0 +1,96 @@
+package modelado;
+
+import java.util.ArrayList;
+
+public class Alumno extends Persona{
+	private int legajo;
+	private String telefono;
+	private String anio; //1 2 3 4 5 6
+	private String curso; //A B C D
+	private ArrayList<String> materiasAprobadas;
+	
+	
+	public Alumno(int legajo, String telefono, String anio, String curso, ArrayList<String> materiasAprobadas) {
+		super();
+		this.legajo = legajo;
+		this.telefono = telefono;
+		this.anio = anio;
+		this.curso = curso;
+		this.materiasAprobadas = materiasAprobadas;
+	}
+	
+	
+
+	public Alumno(String nombre, String apellido, StringBuilder cuil, String nacionalidad, String direccion,
+			int legajo, String telefono, String anio, String curso, ArrayList<String> materiasAprobadas) {
+		super(nombre, apellido, cuil, nacionalidad, direccion);
+		this.legajo = legajo;
+		this.telefono = telefono;
+		this.anio = anio;
+		this.curso = curso;
+		this.materiasAprobadas = materiasAprobadas;
+	}
+
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+
+	public String getAnio() {
+		return anio;
+	}
+
+
+	public void setAnio(String anio) {
+		this.anio = anio;
+	}
+
+
+	public String getCurso() {
+		return curso;
+	}
+
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+
+	public ArrayList<String> getMateriasAprobadas() {
+		return materiasAprobadas;
+	}
+
+
+	public void setMateriasAprobadas(ArrayList<String> materiasAprobadas) {
+		this.materiasAprobadas = materiasAprobadas;
+	}
+
+
+	public String getLegajo() {
+		return legajo;
+	}
+
+	
+	@Override
+    public int compareTo(Alumno a) {
+        if(getLegajo() >a.getLegajo()) return 1;
+        else if(getLegajo() < a.getLegajo())return -1;
+        else return 0;
+    }
+	
+	
+
+	@Override
+	public String toString() {
+		return "Alumno [Legajo=" + legajo + ", Telefono=" + telefono + ", anio=" + anio + ", curso=" + curso
+				+ ", materiasAprobadas=" + materiasAprobadas + "] "+super.toString();
+	}
+	
+	
+}

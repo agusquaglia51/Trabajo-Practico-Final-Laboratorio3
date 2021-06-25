@@ -1,0 +1,9 @@
+package modelado;
+
+public class Empleado {
+	
+	private float sueldo;
+	private String obraSocial;
+	private String telefono;
+	private String nroAsociado;
+}

@@ -1,0 +1,15 @@
+package Interfaces;
+
+import modelado.Empleado;
+
+public interface IListaEmpleados {
+	public int contarEmpleados();
+	public int contarProfesores();
+	public int contarAdministrativos();
+	public String listadoProfesores();
+	public String listadoAdministrativos();
+	public String listadoTodosLosEmpleados();
+	public void eliminar();
+	public void agregar(Empleado empleado);
+	public boolean buscarEmpleado(Empleado empleado);
+}

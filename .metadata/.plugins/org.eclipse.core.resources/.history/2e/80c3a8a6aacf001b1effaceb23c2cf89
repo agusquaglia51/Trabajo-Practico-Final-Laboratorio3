@@ -1,0 +1,138 @@
+package modelado;
+
+
+public abstract class Persona {
+    private String nombre;
+    private String apellido;
+    private String cuil; 
+    private String dni;
+    private String nacionalidad;
+    private String direccion;
+  
+    
+    public Persona()
+    {
+        super();
+        nombre = null;
+        apellido = null;
+        cuil = null;
+        dni =  null;
+        nacionalidad = "";
+        direccion = "";
+    }
+    
+    public Persona(String nombre, String apellido, StringBuilder cuil,String nacionalidad, String direccion) 
+    {
+        super();
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cuil = setCuil(cuil);
+        this.dni = setDni(cuil);
+        this.nacionalidad = nacionalidad;
+        this.direccion = direccion;
+        
+    }
+    
+    public String getNombreCompleto()
+    {
+        return nombre + " " + apellido;
+    }
+    
+    public String getNombre()
+    {
+        return nombre;
+    }
+    
+    public void setNombre(String nombre)// throws ExcepcionDeCampoVacio
+    {
+        this.nombre = nombre;
+    }
+    
+    public String getApellido()
+    {
+        return apellido;
+    }
+    
+    public void setApellido(String apellido)// throws ExcepcionDeCampoVacio
+    {
+        this.apellido = apellido;
+    }
+    
+    public String getCuil()
+    {
+        return cuil.toString();
+    } 
+    
+    public StringBuilder setCuil(StringBuilder cuil) //throws ExcepcionDeCampoVacio
+    {
+        this.cuil = cuil;
+        cuil.insert(2, "-");
+        cuil.insert(11, "-");
+        
+        return cuil;
+    }
+    
+    private StringBuilder setDni(StringBuilder cuil)
+    {
+        StringBuilder dni = new StringBuilder();
+        
+        dni.append(cuil.substring(3, 11));
+        dni.insert(2, ".");
+        dni.insert(6, ".");
+        
+        return dni;
+    }
+    
+    public String getDNI()
+    {
+        return dni.toString(); 
+    }
+    
+    public String getNacionalidad()
+    {
+        return nacionalidad;
+    }
+    
+    public void setNacionalidad(String nacionalidad)
+    {
+        this.nacionalidad = nacionalidad;
+    }
+    
+    public String getDireccion()
+    {
+        return direccion;
+    }
+    
+    public void setDireccion(String direccion)
+    {
+        this.direccion = direccion;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return "\nNombre: " + nombre + "\nApellido: " + apellido 
+                + "\nCuil: " + cuil 
+                + "\nDNI: " + dni 
+                + "\nNacionalidad: " + nacionalidad 
+                + "\nDireccion: " + direccion ;
+    }
+    
+    public boolean equals(Object obj)
+    {
+        boolean esIgual = false;
+        
+        if ( obj != null && obj instanceof Persona )
+        {
+            Persona aux = (Persona) obj; 
+            
+            if ( this.getCuil().equals(aux.getCuil()) )
+                esIgual = true;
+        }
+        
+        return esIgual;
+    }
+    
+    
+ 
+}

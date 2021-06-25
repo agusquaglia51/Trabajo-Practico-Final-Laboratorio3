@@ -1,0 +1,11 @@
+package modelado;
+
+public class Profesores extends Persona{
+	private String NroAsociado;
+	private float Sueldo;
+	private int CantidadDeCursosAcargo;
+	private String Telefono;
+	
+	
+	
+}

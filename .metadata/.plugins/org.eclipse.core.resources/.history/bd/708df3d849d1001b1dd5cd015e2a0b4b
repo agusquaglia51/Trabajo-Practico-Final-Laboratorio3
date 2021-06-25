@@ -1,0 +1,32 @@
+package modelado;
+
+public class HashMapAlumnos implements IListaAlumnos{
+
+	private HashMap<>
+	
+	
+	@Override
+	public void agregar(Empleado elemento) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void quitar(Empleado elemento) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int contar() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String listado() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

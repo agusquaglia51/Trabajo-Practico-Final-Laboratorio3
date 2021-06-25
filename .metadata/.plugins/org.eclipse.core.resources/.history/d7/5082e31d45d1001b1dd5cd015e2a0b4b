@@ -1,0 +1,21 @@
+package modelado;
+
+import java.util.ArrayList;
+
+public class ListadoAlumnos{
+	private ArrayList<Alumno> listaAlumnos;
+
+	public ListadoAlumnos(ArrayList<Alumno> listaAlumnos) {
+		listaAlumnos = new ArrayList<Alumno>();
+	}
+	
+	public void agregarAlumno(Alumno alumno) {
+		listaAlumnos.add(alumno);
+	}
+	
+	public void quitarAlumno(Alumno alumno) {
+		
+	}
+	
+	
+}

@@ -1,0 +1,9 @@
+package modelado;
+
+public class Administrativo extends Empleado{
+	
+	private String departamentoDeTrabajo; // atencion y recepcion de padres, secretaria escolar, gestion contable
+	
+	
+	
+}

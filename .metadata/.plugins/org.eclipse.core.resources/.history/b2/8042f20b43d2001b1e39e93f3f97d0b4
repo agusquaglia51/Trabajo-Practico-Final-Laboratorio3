@@ -1,0 +1,74 @@
+package modelado;
+
+
+import java.util.jar.JarException;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import modelado.ListaEmpleados;
+import modelado.Profesor;
+
+import modelado.Empleado;
+import modelado.HashMapAlumnos;
+import modelado.JsonUtiles;
+
+
+public class Menu {
+	
+	
+	ListaEmpleados listaEmpleadosColegio = new ListaEmpleados();
+	
+	Profesor profe1 = new Profesor(70000,"MEDIFE","23514645","00123300","Matematica",1);
+	
+	Profesor profe2 = new Profesor(8000,"OAM","23514645","00124300","Fisica",4);
+	
+	Profesor profe3 = new Profesor(8000,"OAM","23514645","00124300","Fisica",4);
+	
+	Profesor profe4 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
+	
+	Profesor profe5 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
+
+	
+	Profesor profe6 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
+
+	
+	Profesor profe7 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
+
+	
+	Profesor profe8 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
+
+	
+	listaEmpleadosColegio.agregarElemento(profe8);
+	listaEmpleadosColegio.agregarElemento(profe7);
+	listaEmpleadosColegio.agregarElemento(profe6);
+	listaEmpleadosColegio.agregarElemento(profe5);
+	listaEmpleadosColegio.agregarElemento(profe4);
+	
+	
+	listaEmpleadosColegio.agregarElemento(profe1);
+	listaEmpleadosColegio.agregarElemento(profe2);
+	listaEmpleadosColegio.agregarElemento(profe3);
+	
+	
+	
+	//String json = devolverJSON(listaEmpleadosColegio);
+	
+	
+	//System.out.println(" "+json);
+	
+	//JSONtoJava(json);
+	
+	
+	JsonUtiles pruebaDeLectura = new JsonUtiles();
+	
+	System.out.println(pruebaDeLectura.leer()); 
+	
+	
+	
+	
+	
+	
+	
+}

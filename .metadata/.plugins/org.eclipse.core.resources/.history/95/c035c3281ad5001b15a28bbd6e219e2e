@@ -1,0 +1,165 @@
+package modelado;
+
+import java.util.ArrayList;
+
+import Interfaces.IListaEmpleados;
+
+public class ListaEmpleados implements IListaEmpleados{
+    private ArrayList<Empleado> listado;
+    
+    public ListaEmpleados() {
+        listado=new ArrayList<Empleado>();
+    }
+    
+    public int cantidadEmpleados() {
+    	return listado.size();
+    }
+    
+    
+    public Empleado getEmpleado(int i) {
+    	return listado.get(i);
+    }
+    
+    
+    public void agregarElemento(Empleado aux) {
+        listado.add(aux);
+    }
+    public int cantidadDeProfesores() {
+        int cantidad=0;
+        for(int i=0;i<listado.size();i++) {
+            if(listado.get(i) instanceof Profesor) {
+                cantidad++;
+            }
+        }
+        return cantidad;
+    }
+    public int cantidadAdministrativos() {
+        int cantidad=0;
+        for(int i=0;i<listado.size();i++) {
+            if(listado.get(i) instanceof Administrativo) {
+                cantidad++;
+            }
+        }
+        return cantidad;
+    }
+    
+    public String imprimirListadoProfesores() {
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<listado.size();i++) {
+            if(listado.get(i) instanceof Profesor) {
+                Profesor aux=(Profesor)listado.get(i);
+                sb.append(aux.getNombreCompleto()+"\n");
+            }
+        }
+        return sb.toString();
+    }
+    
+    public String imprimirListadoAdministrativos() {
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<listado.size();i++) {
+            if(listado.get(i) instanceof Administrativo) {
+                Administrativo aux=(Administrativo)listado.get(i);
+                sb.append(aux.getNombreCompleto()+"\n");
+            }
+        }
+        return sb.toString();
+    }
+    public Empleado buscarElemento(Empleado empleado) {
+    	
+        Empleado aux = new Empleado();
+        
+        if(empleado instanceof Profesor){
+            Profesor profeBuscado=(Profesor)empleado;
+            int i=0;
+            int flag=0;
+            while(i<listado.size()&&flag==0) {
+                if(listado.get(i) instanceof Profesor) {
+                    Profesor profeRecorrido=(Profesor)listado.get(i);
+                    if(profeBuscado.equals(profeRecorrido)) {
+                        aux = profeRecorrido;
+                        flag=1;
+                    }
+                }
+                i++;
+            }
+        }
+        else if(empleado instanceof Administrativo) {
+            Administrativo administrativoBuscado=(Administrativo)empleado;
+            int i=0;
+            int flag=0;
+            while(i<listado.size()&&flag==0) {
+                if(listado.get(i) instanceof Administrativo) {
+                    Administrativo administrativoRecorrido=(Administrativo)listado.get(i);
+                    if(administrativoBuscado.equals(administrativoRecorrido)) {
+                        
+                        flag=1;
+                    }
+                }
+                i++;
+            }
+        }
+        return mensaje;
+    }
+    
+ 
+
+	@Override
+	public int contar() {
+		
+		return 0;
+	}
+
+	@Override
+	public String listado() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void quitar(Empleado empleado) {
+		
+		String mensaje="Empleado no encontrado para su eliminacion";
+        if(empleado instanceof Profesor) {
+            Profesor profeBuscado=(Profesor)empleado;
+            int i=0;
+            int flag=0;
+            while(i<listado.size()&&flag==0) {
+                if(listado.get(i) instanceof Profesor) {
+                    Profesor profeRecorrido=(Profesor)listado.get(i);
+                if(profeBuscado.equals(profeRecorrido)) {
+                    listado.remove(i);
+                    flag=1;
+                    mensaje="Elemento eliminado";
+                }
+                }
+                i++;
+            }
+        }
+        else if(empleado instanceof Administrativo) {
+            Administrativo administrativoBuscado=(Administrativo)empleado;
+            int i=0;
+            int flag=0;
+            while(i<listado.size()&&flag==0) {
+                if(listado.get(i) instanceof Administrativo) {
+                    Administrativo administrativoRecorrido=(Administrativo)listado.get(i);
+                    if(administrativoBuscado.equals(administrativoRecorrido)) {
+                        listado.remove(i);
+                        flag=1;
+                        mensaje="Empleado eliminado";
+                    }
+                }
+                i++;
+            }
+        }
+        
+        return mensaje;
+		
+	}
+
+	@Override
+	public void agregar(Empleado alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

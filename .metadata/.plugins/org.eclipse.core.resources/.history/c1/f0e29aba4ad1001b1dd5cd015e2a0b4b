@@ -1,0 +1,9 @@
+package modelado;
+
+public interface IListaAlumnos {
+	
+	public void agregar(Empleado elemento);
+	public void quitar(Empleado elemento);
+	public int contar();
+	public String listado();
+}

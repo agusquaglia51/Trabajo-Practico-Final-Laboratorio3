@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="modelado.ListadoAlumnos"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.jar.JarException"/>
+    <fullyQualifiedTypeName name="org.json.JSONException"/>
+    <fullyQualifiedTypeName name="sun.security.action.PutAllAction"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="modelado.Profesor"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="modelado.JsonUtiles"/>
+    <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.AALOAD"/>
+    <fullyQualifiedTypeName name="modelado.Alumno"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="modelado.IListaAlumnos"/>
+    <fullyQualifiedTypeName name="modelado.Administrativo"/>
+    <fullyQualifiedTypeName name="Interfaces.IListaAlumnos"/>
+    <fullyQualifiedTypeName name="modelado.HashMapAlumnos"/>
+    <fullyQualifiedTypeName name="modelado.Colegio"/>
+    <fullyQualifiedTypeName name="modelado.ListaEmpleados"/>
+    <fullyQualifiedTypeName name="Interfaces.IListaEmpleados"/>
+    <fullyQualifiedTypeName name="modelado.Empleado"/>
+</qualifiedTypeNameHistroy>

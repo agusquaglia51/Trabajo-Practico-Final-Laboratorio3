@@ -1,0 +1,21 @@
+package modelado;
+
+public class Profesor extends Empleado{
+	
+	private String materiaQueEnsenia;
+	private int CantidadDeCursos;
+	
+	
+	
+	public Profesor(float sueldo, String obraSocial, String telefono, String nroAsociado, String materiaQueEnsenia,
+			int cantidadDeCursos) {
+		super(sueldo, obraSocial, telefono, nroAsociado);
+		this.materiaQueEnsenia = materiaQueEnsenia;
+		CantidadDeCursos = cantidadDeCursos;
+	}
+	
+	
+	
+	
+	
+}

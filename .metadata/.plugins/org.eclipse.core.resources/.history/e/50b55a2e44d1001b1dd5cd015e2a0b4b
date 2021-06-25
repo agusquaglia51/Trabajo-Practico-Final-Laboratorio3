@@ -1,0 +1,7 @@
+package modelado;
+
+import java.util.ArrayList;
+
+public class ListadoAlumnos {
+	private ArrayList<Alumnos> listaAlumnos;
+}

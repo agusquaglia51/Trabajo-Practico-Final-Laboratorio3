@@ -1,0 +1,7 @@
+package modelado;
+
+public class Profesor extends Empleado{
+	
+	private String materiaQueEnsenia;
+	private int CantidadDeCursos;
+}

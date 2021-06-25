@@ -1,0 +1,13 @@
+package modelado;
+
+public class EmpleadoAdministrativo extends Persona{
+	
+	private float sueldo;
+	private String departamentoDeTrabajo; //contable, atencion y recepcion de padres, secretaria escolar, gestion de personal
+	private String telefono;
+	private String obraSocial;
+	
+	
+	
+	
+}

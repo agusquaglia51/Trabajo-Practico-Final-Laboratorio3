@@ -1,0 +1,24 @@
+package modelado;
+
+import java.util.ArrayList;
+
+public class ListadoAlumnos{
+	private ArrayList<Alumno> listaAlumnos;
+	
+	public ListaAlumnos() {
+        listaAlumnos=new ArrayList<Alumnos>();
+    }
+    public void agregarElemento(Empleado aux) {
+        listado.add(aux);
+    }
+    public int cantidadDeProfesores() {
+        int cantidad=0;
+        for(int i=0;i<listado.size();i++) {
+            if(listado.get(i) instanceof Profesor) {
+                cantidad++;
+            }
+        }
+        return cantidad;
+    }
+	
+}
