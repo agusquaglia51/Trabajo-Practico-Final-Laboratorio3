@@ -7,30 +7,30 @@ public class Alumno extends Persona{
 	private String telefono;
 	private String anio; //1 2 3 4 5 6
 	private String curso; // A (mañana)		B (tarde)
-	private int faltas;
+	private ArrayList<String> materiasAprobadas;
 	
 	
 
-	public Alumno(int legajo, String telefono, String anio, String curso, int faltas) {
+	public Alumno(int legajo, String telefono, String anio, String curso, ArrayList<String> materiasAprobadas) {
 		super();
 		this.legajo = legajo;
 		this.telefono = telefono;
 		this.anio = anio;
 		this.curso = curso;
-		this.faltas = faltas;
+		this.materiasAprobadas = materiasAprobadas;
 	}
 	
 	
 	
 	
 	public Alumno(String nombre, String apellido, String dni, int legajo, String telefono, String anio, String curso,
-			int faltas) {
+			ArrayList<String> materiasAprobadas) {
 		super(nombre, apellido, dni);
 		this.legajo = legajo;
 		this.telefono = telefono;
 		this.anio = anio;
 		this.curso = curso;
-		this.faltas = faltas;
+		this.materiasAprobadas = materiasAprobadas;
 	}
 
 	
@@ -58,13 +58,15 @@ public class Alumno extends Persona{
 		this.curso = curso;
 	}
 
-	public void setFaltas(int faltas) {
-		this.faltas = faltas;
+	public ArrayList<String> getMateriasAprobadas() {
+		return materiasAprobadas;
 	}
-	
-	public int getFaltas() {
-		return faltas;
+
+	public void setMateriasAprobadas(ArrayList<String> materiasAprobadas) {
+		this.materiasAprobadas = materiasAprobadas;
 	}
+
+
 
 
 	public int getLegajo() {
@@ -85,7 +87,7 @@ public class Alumno extends Persona{
 	@Override
 	public String toString() {
 		return "Alumno [Legajo=" + legajo + ", Telefono=" + telefono + ", anio=" + anio + ", curso=" + curso
-				+ ", faltas= " + faltas + "] "+super.toString();
+				+ ", materiasAprobadas=" + materiasAprobadas + "] "+super.toString();
 	}
 	
 	

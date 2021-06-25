@@ -273,10 +273,13 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		
 		
+		ArrayList<String> materias = new ArrayList<String>();
+		
+		materias.add("Matematica");
 		
 		Profesor profe1 = new Profesor("Agustin", "Quagliarella", "39826712", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
 
-		Alumno alumno1 = new Alumno("Jose", "Garcia", "38265333", 123456789, "2235135789", "5to", "B",10);
+		Alumno alumno1 = new Alumno("Jose", "Garcia", "38265333", 123456789, "2235135789", "5to", "B",materias);
 		
 		Administrativo administrativo1 = new Administrativo(500000,"OSDE","223545545","001989800","gestion contable");
 		

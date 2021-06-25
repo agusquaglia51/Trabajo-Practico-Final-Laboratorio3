@@ -58,9 +58,10 @@ public class Alumno extends Persona{
 		this.curso = curso;
 	}
 
-	public void setFaltas(int faltas) {
+	public void setFaltas() {
 		this.faltas = faltas;
 	}
+	
 	
 	public int getFaltas() {
 		return faltas;
@@ -85,7 +86,7 @@ public class Alumno extends Persona{
 	@Override
 	public String toString() {
 		return "Alumno [Legajo=" + legajo + ", Telefono=" + telefono + ", anio=" + anio + ", curso=" + curso
-				+ ", faltas= " + faltas + "] "+super.toString();
+				+ ", materiasAprobadas=" + materiasAprobadas + "] "+super.toString();
 	}
 	
 	

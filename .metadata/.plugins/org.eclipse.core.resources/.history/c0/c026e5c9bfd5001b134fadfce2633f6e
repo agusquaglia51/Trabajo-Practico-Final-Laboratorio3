@@ -10,7 +10,7 @@ public class Colegio {
 		listaA = new HashMapAlumnos();
 		listaE = new ListaEmpleados();
 	}
-	
+
 	public Colegio(ListaEmpleados listaE, HashMapAlumnos listaA) {
 		super();
 		this.listaE = listaE;
