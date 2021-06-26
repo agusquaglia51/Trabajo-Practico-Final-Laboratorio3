@@ -4,13 +4,27 @@ package modelado;
 public class Alumno extends Persona{
 	private int legajo;
 	private String telefono;
-	private String anio; //1 2 3 4 5 6
+	private int anio; //1 2 3 4 5 6
 	private String curso; // A (mañana)		B (tarde)
 	private int faltas;
 	
 	
+	
+	
+	
 
-	public Alumno(int legajo, String telefono, String anio, String curso, int faltas) {
+	public Alumno() {
+		legajo = 0;
+		telefono = "";
+		anio = 0;
+		curso = "";
+		faltas = 0;
+	}
+
+
+
+
+	public Alumno(int legajo, String telefono, int anio, String curso, int faltas) {
 		super();
 		this.legajo = legajo;
 		this.telefono = telefono;
@@ -22,7 +36,7 @@ public class Alumno extends Persona{
 	
 	
 	
-	public Alumno(String nombre, String apellido, String dni, int legajo, String telefono, String anio, String curso,
+	public Alumno(String nombre, String apellido, String dni, int legajo, String telefono, int anio, String curso,
 			int faltas) {
 		super(nombre, apellido, dni);
 		this.legajo = legajo;
@@ -41,11 +55,11 @@ public class Alumno extends Persona{
 		this.telefono = telefono;
 	}
 
-	public String getAnio() {
+	public int getAnio() {
 		return anio;
 	}
 
-	public void setAnio(String anio) {
+	public void setAnio(int anio) {
 		this.anio = anio;
 	}
 

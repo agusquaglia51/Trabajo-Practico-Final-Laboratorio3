@@ -1,0 +1,42 @@
+package modelado;
+
+import java.util.ArrayList;
+
+import Interfaces.IListaAlumnos;
+import Interfaces.IListaEmpleados;
+
+public class Comision implements IListaAlumnos{
+	
+	private ArrayList<Alumno> comision;
+	
+	public Comision() {
+		// TODO Auto-generated constructor stub
+		
+	}
+
+	@Override
+	public int contar() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String listado() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void quitar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void agregar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

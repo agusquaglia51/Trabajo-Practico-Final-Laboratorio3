@@ -52,6 +52,11 @@ public class HashMapAlumnos implements IListaAlumnos{
 	}
 	
 
+	
+	public HashMap<Integer, Alumno> getMapa() {
+		return mapa;
+	}
+
 	@Override
 	public String listado() {
 		// TODO Auto-generated method stub

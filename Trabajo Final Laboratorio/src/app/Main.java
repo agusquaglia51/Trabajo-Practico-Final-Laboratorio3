@@ -59,24 +59,7 @@ public class Main {
 		
 		
 		
-		
-		//System.out.println(" "+json);
-		
-		//JSONtoJava(json);
-		
-		//JsonUtiles pruebaDeLectura = new JsonUtiles();
-		
-		//System.out.println(pruebaDeLectura.leer()); 
-		
-		
-		
 		Menu(SanAgustin);
-		
-		
-		
-		
-		
-		
 		
 		
 		
@@ -242,7 +225,8 @@ public class Main {
 		
 		String usuario;
 		String contra;
-		int opc1,opc2;
+		int opc1, opc2, anio;
+		String curso = "";
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -251,7 +235,7 @@ public class Main {
 		
 		Profesor profe1 = new Profesor("Agustin", "Quagliarella", "39826712", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
 
-		Alumno alumno1 = new Alumno("Jose", "Garcia", "38265333", 123456789, "2235135789", "5to", "B",10);
+		Alumno alumno1 = new Alumno("Jose", "Garcia", "38265333", 123456789, "2235135789", 5, "B",10);
 		
 		Administrativo administrativo1 = new Administrativo(500000,"OSDE","223545545","001989800","gestion contable");
 		
@@ -268,8 +252,8 @@ public class Main {
 		
 			System.out.println("\n   ///// MENU /////   \n");
 			
-			System.out.println("1. Administrar la lista de empleados \n");
-			System.out.println("2. Administrar la lista de alumnos \n");
+			System.out.println("1. Administrar empleados \n");
+			System.out.println("2. Administrar alumnos \n");
 			System.out.println("3. Leer listado de empleados json del archivo \n");
 			System.out.println("4. Salir \n");
 			
@@ -362,12 +346,15 @@ public class Main {
 						System.out.println("3. Ver la cantidad de alumnos \n");
 						System.out.println("4. Imprimir listado de alumnos \n");
 						System.out.println("5. Limpiar lista de alumnos \n");
-						System.out.println("6. Salir\n");
+						System.out.println("6. Crear comisiones \n");
+						System.out.println("7. Mostrar comision");
+
+						System.out.println("8. Salir\n");
 						
 						System.out.println("Digite la opcion que desea realizar: ");
 						opc2 = scan.nextInt();
 					
-					}while(opc2 != 6);
+					}while(opc2 != 8);
 					
 					switch(opc2) {
 					
@@ -396,6 +383,71 @@ public class Main {
 							System.out.println("La lista se ha limpiado con exito! \n");
 							break;
 							
+						case 6:
+							SanAgustin.CrearCursos();
+							System.out.println("Se han creado las comisiones! \n");
+							break;
+							
+						case 7:
+							System.out.println("Digite el anio que desea imprimir por pantalla: ");
+							anio = scan.nextInt();
+							
+							switch(anio) {
+								case 1:
+									System.out.println("Digite el turno que desea ver, pulse 'A' para ver el turno mañana o 'B' para ver el turno tarde: ");
+									curso = scan.nextLine();
+									if(curso == "A") {
+										System.out.println(SanAgustin.getComision1roA().listado());
+									}else {
+										System.out.println(SanAgustin.getComision1roB().listado());
+									}
+									break;
+								case 2:
+									System.out.println("Digite el turno que desea ver, pulse 'A' para ver el turno mañana o 'B' para ver el turno tarde: ");
+									curso = scan.nextLine();
+									if(curso == "A") {
+										System.out.println(SanAgustin.getComision2doA().listado());
+									}else {
+										System.out.println(SanAgustin.getComision2doB().listado());
+									}
+									break;
+								case 3:
+									System.out.println("Digite el turno que desea ver, pulse 'A' para ver el turno mañana o 'B' para ver el turno tarde: ");
+									curso = scan.nextLine();
+									if(curso == "A") {
+										System.out.println(SanAgustin.getComision3roA().listado());
+									}else {
+										System.out.println(SanAgustin.getComision3roB().listado());
+									}
+									break;
+								case 4:
+									System.out.println("Digite el turno que desea ver, pulse 'A' para ver el turno mañana o 'B' para ver el turno tarde: ");
+									curso = scan.nextLine();
+									if(curso == "A") {
+										System.out.println(SanAgustin.getComision4toA().listado());
+									}else {
+										System.out.println(SanAgustin.getComision4toB().listado());
+									}
+									break;
+								case 5:
+									System.out.println("Digite el turno que desea ver, pulse 'A' para ver el turno mañana o 'B' para ver el turno tarde: ");
+									curso = scan.nextLine();
+									if(curso == "A") {
+										System.out.println(SanAgustin.getComision5toA().listado());
+									}else {
+										System.out.println(SanAgustin.getComision5toB().listado());
+									}
+									break;
+								case 6:
+									System.out.println("Digite el turno que desea ver, pulse 'A' para ver el turno mañana o 'B' para ver el turno tarde: ");
+									curso = scan.nextLine();
+									if(curso == "A") {
+										System.out.println(SanAgustin.getComision6toA().listado());
+									}else {
+										System.out.println(SanAgustin.getComision6toB().listado());
+									}
+									break;
+							}
 							
 					}
 				case 3:
