@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import Excepciones.CursoIncorrectException;
+
 public class Colegio {
 	
 	private String nombre;
@@ -200,6 +202,42 @@ public class Colegio {
 	public void setComision6toB(Comision comision6toB) {
 		this.comision6toB = comision6toB;
 	}
+	
+	
+	
+	public void ActualizarCondicionDeAlumnos(HashMapAlumnos listaA) {
+		
+		HashMap<Integer, Alumno> mapa = listaA.getMapa();
+		Iterator<Entry<Integer, Alumno>> it = mapa.entrySet().iterator();
+		
+		while(it.hasNext()) {
+			
+			Alumno aux = new Alumno();
+			
+			Map.Entry<Integer, Alumno> entry = (Map.Entry<Integer, Alumno>)it.next();
+			aux = entry.getValue();
+			if(aux.getCondicion() == "regular" && aux.getFaltas() >= 15) {
+				aux.setCondicion("no regular");
+			}
+			entry.setValue(aux);
+			
+		}
+	}
+	
+	public void CambiarAlumnoDeTurno(int legajo, String curso) throws CursoIncorrectException {
+		Alumno aux = new Alumno();
+		aux = listaA.getAlumno(legajo);
+		if(curso == "A" || curso == "B") {
+			aux.setCurso(curso);
+		}else {
+			throw new CursoIncorrectException("El curso que ha ingresado no es valido", curso);
+		}
+		
+	}
+	
+	
+	
+	
 	
 	
 	public void CrearCursos() {

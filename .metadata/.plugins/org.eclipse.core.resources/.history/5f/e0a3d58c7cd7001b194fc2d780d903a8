@@ -1,0 +1,7 @@
+package modelado;
+
+public class Celulares {
+	
+	private String nombre;
+	private String marca;
+}

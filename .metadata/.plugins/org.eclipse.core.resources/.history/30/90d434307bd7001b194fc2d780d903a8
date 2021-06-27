@@ -1,0 +1,43 @@
+package modelado;
+
+import java.util.ArrayList;
+
+public class CajaDeObjetosPerdidos<P> {
+	
+	private ArrayList<P> lista;
+	P unaVariable = new P();
+
+	public CajaDeObjetosPerdidos() {
+		lista = new ArrayList<P>();
+	}
+	
+	public void agregar(P p) {
+	     lista.add(p);
+	}
+	
+	
+	public void quitarObjeto(P p) {
+		lista.remove(p);
+	}
+	
+	public int contarObjeto(P p) {
+		
+	   int contador=0;
+	   for(int i=0;i<lista.size();i++) {
+	     if(lista.get(i) instanceof p) {
+	          contador++;
+	      }
+	    }
+	  return contador;
+	}
+	
+	public P buscarObjeto(P p) {
+		
+		
+		
+		return p;
+	}
+	
+
+	
+}

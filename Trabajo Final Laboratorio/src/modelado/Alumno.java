@@ -5,7 +5,8 @@ public class Alumno extends Persona{
 	private int legajo;
 	private String telefono;
 	private int anio; //1 2 3 4 5 6
-	private String curso; // A (mañana)		B (tarde)
+	private String curso; // A (mañana)	  -   B (tarde)
+	private String condicion; // regular - no regular
 	private int faltas;
 	
 	
@@ -18,12 +19,11 @@ public class Alumno extends Persona{
 		telefono = "";
 		anio = 0;
 		curso = "";
+		condicion = "";
 		faltas = 0;
 	}
 
-
-
-
+	
 	public Alumno(int legajo, String telefono, int anio, String curso, int faltas) {
 		super();
 		this.legajo = legajo;
@@ -34,8 +34,17 @@ public class Alumno extends Persona{
 	}
 	
 	
-	
-	
+	public Alumno(int legajo, String telefono, int anio, String curso, String condicion, int faltas) {
+		super();
+		this.legajo = legajo;
+		this.telefono = telefono;
+		this.anio = anio;
+		this.curso = curso;
+		this.condicion = condicion;
+		this.faltas = faltas;
+	}
+
+
 	public Alumno(String nombre, String apellido, String dni, int legajo, String telefono, int anio, String curso,
 			int faltas) {
 		super(nombre, apellido, dni);
@@ -45,8 +54,25 @@ public class Alumno extends Persona{
 		this.curso = curso;
 		this.faltas = faltas;
 	}
+	
+	
+	public Alumno(String nombre, String apellido, String dni, int legajo, String telefono, int anio, String curso,
+			String condicion, int faltas) {
+		super(nombre, apellido, dni);
+		this.legajo = legajo;
+		this.telefono = telefono;
+		this.anio = anio;
+		this.curso = curso;
+		this.condicion = condicion;
+		this.faltas = faltas;
+	}
+
 
 	
+	
+
+
+
 	public String getTelefono() {
 		return telefono;
 	}
@@ -77,6 +103,18 @@ public class Alumno extends Persona{
 	
 	public int getFaltas() {
 		return faltas;
+	}
+	
+	
+
+
+	public String getCondicion() {
+		return condicion;
+	}
+
+
+	public void setCondicion(String condicion) {
+		this.condicion = condicion;
 	}
 
 

@@ -10,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import Excepciones.CursoIncorrectException;
 import Excepciones.PasswordIncorrectException;
 import modelado.ListaEmpleados;
 import modelado.Profesor;
@@ -26,34 +27,11 @@ public class Main {
 	
 	static Scanner scan;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CursoIncorrectException {
 		
 		scan = new Scanner(System.in);
 		
 		Colegio SanAgustin = new Colegio();
-		
-		/*
-		
-		Profesor profe1 = new Profesor(70000,"MEDIFE","23514645","00123300","Matematica",1);
-		
-		Profesor profe2 = new Profesor(8000,"OAM","23514645","00124300","Fisica",4);
-		
-		Profesor profe3 = new Profesor(8000,"OAM","23514645","00124300","Fisica",4);
-		
-		Profesor profe4 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
-		
-		Profesor profe5 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
-
-		
-		Profesor profe6 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
-
-		
-		Profesor profe7 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
-
-		
-		Profesor profe8 = new Profesor("Agustin", "Quagliarella", "39826712", "Argentino", "CORRIENTES 2210", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
-
-		*/
 		
 		
 		
@@ -67,26 +45,7 @@ public class Main {
 	
 	
 	
-	
-	
-	
-	public static void JSONtoJava(String json) {
-		
-		/*
-		try {
-			
-			
-			
-			int i = 0;
-		
-			
-			
-			
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}*/
-	}
-	
+
 	
 	
 	
@@ -219,13 +178,13 @@ public class Main {
     }
 	
 	
-	public static void Menu(Colegio SanAgustin) {
+	public static void Menu(Colegio SanAgustin) throws CursoIncorrectException {
 		
 		
 		
 		String usuario;
 		String contra;
-		int opc1, opc2, anio;
+		int opc1, opc2, anio, legajo;
 		String curso = "";
 		
 		
@@ -254,7 +213,7 @@ public class Main {
 			
 			System.out.println("1. Administrar empleados \n");
 			System.out.println("2. Administrar alumnos \n");
-			System.out.println("3. Leer listado de empleados json del archivo \n");
+			System.out.println("3. Mostrar json por pantalla y cargarlo a un archivo \n");
 			System.out.println("4. Salir \n");
 			
 			System.out.println("Digite la opcion que desea realizar: \n");
@@ -347,14 +306,16 @@ public class Main {
 						System.out.println("4. Imprimir listado de alumnos \n");
 						System.out.println("5. Limpiar lista de alumnos \n");
 						System.out.println("6. Crear comisiones \n");
-						System.out.println("7. Mostrar comision");
+						System.out.println("7. Mostrar comision \n");
+						System.out.println("8. Actualizar condicion de alumnos (si tienen mas de 15 faltas pasan a ser no regular) \n");
+						System.out.println("9. Cambiar alumno de comision (A o B) \n");
 
-						System.out.println("8. Salir\n");
+						System.out.println("10. Salir\n");
 						
 						System.out.println("Digite la opcion que desea realizar: ");
 						opc2 = scan.nextInt();
 					
-					}while(opc2 != 8);
+					}while(opc2 != 10);
 					
 					switch(opc2) {
 					
@@ -448,17 +409,29 @@ public class Main {
 									}
 									break;
 							}
+							break;
+						case 8:
+							SanAgustin.ActualizarCondicionDeAlumnos(SanAgustin.getListaA());
+							System.out.println("Se actualizo correctamente la condicion de la lista de alumnos \n");
+							break;
+							
+						case 9:
+							
+							System.out.println("Digite el legajo del alumno: ");
+							legajo = scan.nextInt();
+							
+							
+							System.out.println("Digite la comision a la que desea cambiarse \n");
+							System.out.println("Pulse 'A' para cambiarse a la comision A: \n");
+							System.out.println("Pulse 'B' para cambiarse a la comision B: \n");
+							curso = scan.next();
+							SanAgustin.CambiarAlumnoDeTurno(legajo,curso);
+							SanAgustin.ActualizarCondicionDeAlumnos(SanAgustin.getListaA());
 							
 					}
 				case 3:
-					JsonUtiles pruebaDeLectura = new JsonUtiles();
-					
-					
-					String aux = pruebaDeLectura.leer();
-					
-					
+					String aux = devolverJSON(SanAgustin);
 					System.out.println(aux); 
-					
 					break;
 					
 					
@@ -466,7 +439,7 @@ public class Main {
 			}
 			
 		}while(opc1 != 4);
-		System.out.println("El programa ha finalizado");
+		System.out.println("El programa ha finalizado \n");
 		
 		
 	}

@@ -14,18 +14,18 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.AALOAD"/>
-    <fullyQualifiedTypeName name="modelado.Alumno"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="modelado.IListaAlumnos"/>
-    <fullyQualifiedTypeName name="Interfaces.IListaAlumnos"/>
-    <fullyQualifiedTypeName name="modelado.HashMapAlumnos"/>
     <fullyQualifiedTypeName name="modelado.Colegio"/>
     <fullyQualifiedTypeName name="modelado.ListaEmpleados"/>
-    <fullyQualifiedTypeName name="Interfaces.IListaEmpleados"/>
     <fullyQualifiedTypeName name="modelado.Empleado"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="Excepciones.PasswordIncorrectException"/>
     <fullyQualifiedTypeName name="modelado.Administrativo"/>
     <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="Interfaces.IListaEmpleados"/>
+    <fullyQualifiedTypeName name="Interfaces.IListaAlumnos"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="modelado.HashMapAlumnos"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="modelado.Alumno"/>
 </qualifiedTypeNameHistroy>
