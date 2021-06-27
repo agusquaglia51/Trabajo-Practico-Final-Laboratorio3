@@ -204,8 +204,35 @@ public class Colegio {
 	}
 	
 	
+	public float porcentajeProfesorCursos(int cantidadCursos) {
+        int contador=0;
+        
+        int total = listaE.contarProfesores();
+        float porcentaje = 0;
+        int i = 0;
+        while(i < listaE.cantidadEmpleados()) {
+            if(listaE.getEmpleado(i) instanceof Profesor) {
+                Profesor aux = (Profesor) listaE.getEmpleado(i);
+                if(aux.getCantidadDeCursos() >= cantidadCursos) {
+                    contador++;
+                }
+
+            }
+
+            i++;
+        }
+        
+        porcentaje=contador*100;
+        porcentaje=porcentaje/total;
+        
+        return porcentaje;
+    }
+
 	
-	public void ActualizarCondicionDeAlumnos(HashMapAlumnos listaA) {
+	
+	
+	
+	public void ActualizarCondicionDeAlumnos(HashMapAlumnos listaA) {  //SI TIENE MAS DE 15 FALTAS CAMBIAR LA CONDICION A NO REGULAR
 		
 		HashMap<Integer, Alumno> mapa = listaA.getMapa();
 		Iterator<Entry<Integer, Alumno>> it = mapa.entrySet().iterator();
@@ -234,6 +261,35 @@ public class Colegio {
 		}
 		
 	}
+	
+	public float porcentajeAlumnosFaltas(int faltas) {
+        // TODO Auto-generated method stub
+
+		int contador = 0;
+        
+        float porcentaje = 0;
+		
+		HashMap<Integer, Alumno> mapa = listaA.getMapa();
+		
+        Iterator<Entry<Integer, Alumno>> it = mapa.entrySet().iterator();
+        
+        int total = mapa.size();
+
+        while(it.hasNext()) {
+        	
+            Map.Entry<Integer, Alumno> entry = (Map.Entry<Integer, Alumno>)it.next();
+            
+            if(entry.getValue().getFaltas() >= faltas) {
+                contador++;
+            }
+        }
+        
+        porcentaje=contador*100;
+        porcentaje=porcentaje/total;
+            
+        
+        return porcentaje;
+    }
 	
 	
 	

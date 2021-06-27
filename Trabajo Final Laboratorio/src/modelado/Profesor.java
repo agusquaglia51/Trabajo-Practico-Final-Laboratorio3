@@ -3,9 +3,14 @@ package modelado;
 public class Profesor extends Empleado{
 	
 	private String materiaQueEnsenia;
-	private int cantidadDeCursos;
+	private int cantidadDeCursos;  
 	
 
+	public Profesor() {
+		// TODO Auto-generated constructor stub
+		materiaQueEnsenia = null;
+		cantidadDeCursos = 0;
+	}
 
 
 	public Profesor(float sueldo, String obraSocial, String telefono, String nroAsociado, String materiaQueEnsenia,
@@ -27,9 +32,6 @@ public class Profesor extends Empleado{
 
 
 
-
-
-
 	public int getCantidadDeCursos() {
 		return cantidadDeCursos;
 	}
@@ -37,6 +39,13 @@ public class Profesor extends Empleado{
 	public void setCantidadDeCursos(int cantidadDeCursos) {
 		this.cantidadDeCursos = cantidadDeCursos;
 	}
+	
+	
+
+	public void setMateriaQueEnsenia(String materiaQueEnsenia) {
+		this.materiaQueEnsenia = materiaQueEnsenia;
+	}
+
 
 	public String getMateriaQueEnsenia() {
 		return materiaQueEnsenia;

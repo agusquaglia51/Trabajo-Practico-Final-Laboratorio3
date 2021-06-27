@@ -34,20 +34,12 @@ public class Main {
 		Colegio SanAgustin = new Colegio();
 		
 		
-		
-		
-		
-		
-		
 		Menu(SanAgustin);
 		
 		
 		
 	}
 	
-	
-	
-
 	
 	
 	
@@ -186,8 +178,10 @@ public class Main {
 		
 		String usuario;
 		String contra;
-		int opc1, opc2, anio, legajo;
+		int opc1, opc2, anio, legajo, cantidadFaltas = 0, cursosCargo = 0;
 		String curso = "";
+		
+		
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -234,7 +228,8 @@ public class Main {
 						System.out.println("5. Imprimir listado de profesores \n");
 						System.out.println("6. Imprimir listado de administrativos \n");
 						System.out.println("7. Buscar un empleado \n");
-						System.out.println("8. Salir \n");
+						System.out.println("8. Mostrar porcentaje de profesores con cierta cantidad de cursos a cargo \n");
+						System.out.println("9. Salir \n");
 						
 						System.out.println("Digite la opcion que desea realizar: \n");
 						opc2 = scan.nextInt();
@@ -291,10 +286,16 @@ public class Main {
 								break;
 							
 							case 8:
+								System.out.println("Digite la cantidad de cursos a cargo: ");
+								cursosCargo = scan.nextInt();
+								System.out.println("El porcentaje de profesores con mas cantidad de cursos que la ingresada es: " + SanAgustin.porcentajeProfesorCursos(cursosCargo)+" % \n");
+								break;
+								
+							case 9:
 								break;
 						}
 						
-					}while(opc2 != 8);
+					}while(opc2 != 9);
 					break;
 					
 				case 2:
@@ -311,13 +312,14 @@ public class Main {
 						System.out.println("7. Mostrar comision \n");
 						System.out.println("8. Actualizar condicion de alumnos (si tienen mas de 15 faltas pasan a ser no regular) \n");
 						System.out.println("9. Cambiar alumno de comision (A o B) \n");
+						System.out.println("10. Mostrar el porcentaje de alumnos con cierta cantidad de faltas \n");
 
-						System.out.println("10. Salir\n");
+						System.out.println("11. Salir\n");
 						
 						System.out.println("Digite la opcion que desea realizar: ");
 						opc2 = scan.nextInt();
 					
-					}while(opc2 != 10);
+					}while(opc2 != 11);
 					
 					switch(opc2) {
 					
@@ -429,6 +431,17 @@ public class Main {
 							curso = scan.next();
 							SanAgustin.CambiarAlumnoDeComision(legajo,curso);
 							SanAgustin.ActualizarCondicionDeAlumnos(SanAgustin.getListaA());
+							break;
+							
+						case 10:
+							
+							System.out.println("Digite la cantidad de faltas: ");
+							cantidadFaltas = scan.nextInt();
+							System.out.println("El porcentaje de alumnos que supera esa cantidad de faltas es: " + SanAgustin.porcentajeAlumnosFaltas(cantidadFaltas)+ "% \n");
+							break;
+						
+						case 11:
+							break;
 							
 					}
 				case 3:

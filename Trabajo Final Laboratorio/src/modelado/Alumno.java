@@ -105,8 +105,6 @@ public class Alumno extends Persona{
 		return faltas;
 	}
 	
-	
-
 
 	public String getCondicion() {
 		return condicion;
