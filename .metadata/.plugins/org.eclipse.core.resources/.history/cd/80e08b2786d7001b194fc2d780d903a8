@@ -224,7 +224,7 @@ public class Colegio {
 		}
 	}
 	
-	public void CambiarAlumnoDeComision(int legajo, String curso) throws CursoIncorrectException {
+	public void CambiarAlumnoDeTurno(int legajo, String curso) throws CursoIncorrectException {
 		Alumno aux = new Alumno();
 		aux = listaA.getAlumno(legajo);
 		if(curso == "A" || curso == "B") {

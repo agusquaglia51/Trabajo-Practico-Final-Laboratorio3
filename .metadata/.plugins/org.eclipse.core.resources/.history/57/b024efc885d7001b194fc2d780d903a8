@@ -37,8 +37,6 @@ public class Main {
 		
 		
 		
-		
-		
 		Menu(SanAgustin);
 		
 		
@@ -427,7 +425,7 @@ public class Main {
 							System.out.println("Pulse 'A' para cambiarse a la comision A: \n");
 							System.out.println("Pulse 'B' para cambiarse a la comision B: \n");
 							curso = scan.next();
-							SanAgustin.CambiarAlumnoDeComision(legajo,curso);
+							SanAgustin.CambiarAlumnoDeTurno(legajo,curso);
 							SanAgustin.ActualizarCondicionDeAlumnos(SanAgustin.getListaA());
 							
 					}
