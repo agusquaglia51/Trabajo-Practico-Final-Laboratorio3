@@ -1,6 +1,0 @@
-package modelado;
-
-public class Colegio {
-	ListaEmpleados listaE = new ListaEmpleados();
-	HashMapAlumnos listaA = new HashMapAlumnos();
-}
