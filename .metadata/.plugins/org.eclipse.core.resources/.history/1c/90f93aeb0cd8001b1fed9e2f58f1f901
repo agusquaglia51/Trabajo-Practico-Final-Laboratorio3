@@ -184,7 +184,7 @@ public class Main {
 		
 		
 		Profesor profe1 = new Profesor("Agustin", "Quagliarella", "39826712", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
-		Profesor profe2 = new Profesor("Juan", "Garcia", "35821712", 70000, "OSDE", "123654", "00123400", "Matematica", 5);
+		Profesor profe2 = new Profesor("Juan", "Garcia", "39826712", 70000, "OSDE", "123456", "00124500", "Matematica", 5);
 
 		Alumno alumno1 = new Alumno("Jose", "Garcia", "38265333", 123456789, "2235135789", 5, "B",10);
 		Alumno alumno2 = new Alumno("Jose", "Perez", "38265333", 123451239, "2235135789", 6, "B",20);
@@ -234,8 +234,8 @@ public class Main {
 						
 						switch(opc2) {
 							case 1:
-								SanAgustin.getListaE().agregarEmpleado(profe1); //ESTO ESTA HARDCODEADO PARA PROBAR EL PROGRAMA
-								SanAgustin.getListaE().agregarEmpleado(administrativo1);//ESTO ESTA HARDCODEADO PARA PROBAR EL PROGRAMA
+								SanAgustin.getListaE().agregarEmpleado(profe1);
+								SanAgustin.getListaE().agregarEmpleado(administrativo1);
 								System.out.println("Se agrego un empleado correctamente \n");									
 								break;
 								
@@ -308,8 +308,8 @@ public class Main {
 						switch(opc2) {
 						
 							case 1:
-								SanAgustin.getListaA().agregar(alumno1);//ESTO ESTA HARDCODEADO PARA PROBAR EL PROGRAMA
-								SanAgustin.getListaA().agregar(alumno2);//ESTO ESTA HARDCODEADO PARA PROBAR EL PROGRAMA
+								SanAgustin.getListaA().agregar(alumno1);
+								SanAgustin.getListaA().agregar(alumno2);
 								System.out.println("Se agrego un alumno correctamente \n");
 								break;
 							

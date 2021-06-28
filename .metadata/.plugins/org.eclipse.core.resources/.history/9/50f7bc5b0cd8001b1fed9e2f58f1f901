@@ -12,6 +12,6 @@ public class CursoIncorrectException extends Exception{
 	
 	@Override
 	public String getMessage() {
-		return super.getMessage()+":  "+curs;
+		return super.getMessage()+" "+curs;
 	}
 }
