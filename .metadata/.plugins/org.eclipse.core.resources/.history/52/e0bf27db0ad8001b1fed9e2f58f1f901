@@ -127,17 +127,14 @@ public class Alumno extends Persona{
         else if(getLegajo() < a.getLegajo())return -1;
         else return 0;
     }
-
+	
+	
 
 	@Override
 	public String toString() {
-		return "Alumno [legajo=" + legajo + ", telefono=" + telefono + ", anio=" + anio + ", curso=" + curso
-				+ ", condicion=" + condicion + ", faltas=" + faltas + "]"+super.toString();
+		return "Alumno [Legajo=" + legajo + ", Telefono=" + telefono + ", anio=" + anio + ", curso=" + curso
+				+ ", faltas= " + faltas + "] "+super.toString();
 	}
-	
-	
-
-	
 	
 	
 }

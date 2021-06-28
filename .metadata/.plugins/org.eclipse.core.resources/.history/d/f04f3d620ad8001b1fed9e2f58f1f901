@@ -186,7 +186,6 @@ public class Main {
 		Profesor profe1 = new Profesor("Agustin", "Quagliarella", "39826712", 70000, "OSDE", "123456", "00124500", "Biologia", 7);
 
 		Alumno alumno1 = new Alumno("Jose", "Garcia", "38265333", 123456789, "2235135789", 5, "B",10);
-		Alumno alumno2 = new Alumno("Jose", "Perez", "38265333", 123451239, "2235135789", 6, "B",20);
 		
 		Administrativo administrativo1 = new Administrativo(500000,"OSDE","223545545","001989800","gestion contable");
 		
@@ -308,7 +307,6 @@ public class Main {
 						
 							case 1:
 								SanAgustin.getListaA().agregar(alumno1);
-								SanAgustin.getListaA().agregar(alumno2);
 								System.out.println("Se agrego un alumno correctamente \n");
 								break;
 							

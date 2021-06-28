@@ -243,7 +243,7 @@ public class Colegio {
 			
 			Map.Entry<Integer, Alumno> entry = (Map.Entry<Integer, Alumno>)it.next();
 			aux = entry.getValue();
-			if(aux.getCondicion() != "no regular" && aux.getFaltas() >= 15) {
+			if(aux.getCondicion() == "regular" && aux.getFaltas() >= 15) {
 				aux.setCondicion("no regular");
 			}
 			entry.setValue(aux);
